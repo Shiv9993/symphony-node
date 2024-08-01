@@ -10,7 +10,7 @@ These command will list all ports in usef if it was not listed in LISTEN then it
 ss -tuln
 ```
 
-# check again if that port is free, if its used it connects if not it will not give any output
+# check again if that port is free, if its used, it connects if not it will not give any output
 
 ```
 nc -zv 127.0.0.1 26656
