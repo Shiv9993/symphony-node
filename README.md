@@ -152,6 +152,31 @@ sudo journalctl -fu symphony
 
 # use ctrl+c to exit logs
 ```
+## wait atleast 10 - 30 min for sync
+you can waitch logs ... when you can see the commits and txn in the logs then get the faucet
+it may take around 10 - 30 min
+
+
+## get faucet from 
+```console
+https://testnet.ping.pub/symphony/faucet
+```
+## create delegator
+```console
+symphonyd tx staking create-validator \
+  --amount 1000000note \
+  --commission-max-change-rate "0.05" \
+  --commission-max-rate "0.10" \
+  --commission-rate "0.05" \
+  --min-self-delegation "1" \
+  --pubkey=$(symphonyd tendermint show-validator) \
+  --moniker 'symphony-node' \
+  --chain-id symphony-testnet-2 \
+  --node https://symphony-testnet-rpc.polkachu.com:443  \
+  --from wallet
+```
+
+## save that txn hash and done your validator node is created.
 
 ## to stop the node
 
