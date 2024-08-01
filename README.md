@@ -4,7 +4,7 @@
 # IF U ARE RUNNOG OTHER NODES OR PROCESSES CHECK IF THE 26656 PORT IS FREE
 
 # Using ss Command:
-These command will list all ports in usef if it was not listed then it is free
+These command will list all ports in usef if it was not listed in LISTEN then it is free
 
 ```
 ss -tuln
