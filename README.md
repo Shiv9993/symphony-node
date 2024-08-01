@@ -19,6 +19,26 @@ nc -zv 127.0.0.1 26656
 
 # if the port is free proceed with the below 
 
+## create virtual environment 
+# download virtual env. packages
+```
+sudo apt update
+sudo apt install python3 python3-venv
+```
+
+# create env.
+```
+cd $HOME
+python3 -m venv symphony-venv
+
+```
+# actiavte it
+
+```
+cd $HOME
+source symphony-venv/bin/activate
+```
+
 
 ## install go
 ```console
