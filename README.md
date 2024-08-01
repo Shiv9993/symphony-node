@@ -156,11 +156,22 @@ sudo journalctl -fu symphony
 you can waitch logs ... when you can see the commits and txn in the logs then get the faucet
 it may take around 10 - 30 min
 
+## create wallet
+```console
+symphonyd keys add wallet
+```
+give password and save the nmemonic seed
+
+go to kepler wallet and import that seed
 
 ## get faucet from 
+
 ```console
 https://testnet.ping.pub/symphony/faucet
+# and connect you wallet on the explorer page and add the syphony-testnet2 chain
+# after adding the chain, go to kepler wallet and go to manage chain visibility and add symphony-testnet chain
 ```
+
 ## create delegator
 ```console
 symphonyd tx staking create-validator \
