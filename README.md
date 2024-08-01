@@ -1,7 +1,7 @@
 # symphony-node
 ##Here are the steps
 ## install go
-```
+```console
 sudo rm -rvf /usr/local/go/
 wget https://golang.org/dl/go1.21.1.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz
