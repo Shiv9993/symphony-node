@@ -17,7 +17,7 @@ nc -zv 127.0.0.1 26656
 ```
 
 
-# if its free proceed with the below 
+# if the port is free proceed with the below 
 
 
 ## install go
