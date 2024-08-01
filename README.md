@@ -170,11 +170,11 @@ source symphony-venv/bin/activate
 
 # start the node 
 
-```
+```console
 sudo systemctl start symphony.service
 ```
 # to check logs
-```
+```console
 sudo journalctl -fu symphony
 ```
 # use ctrl + c to exit logs
