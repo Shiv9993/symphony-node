@@ -141,13 +141,13 @@ EOF
  ## strat your node
 
 ```console
-# Enable service
+# enable that service
 sudo systemctl enable symphony.service
 
-# Start service
+# start that servive u have enabled
 sudo service symphony start
 
-# Check logs
+# check logs
 sudo journalctl -fu symphony
 
 # use ctrl+c to exit logs
