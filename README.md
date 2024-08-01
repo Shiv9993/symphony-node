@@ -94,11 +94,11 @@ sed -i 's/seeds = ""/seeds = "ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-s
 ## launching your node
 
 ```console
-# Create Cosmovisor Folders
+# create cosmovisor folders
 mkdir -p ~/.symphonyd/cosmovisor/genesis/bin
 mkdir -p ~/.symphonyd/cosmovisor/upgrades
 
-# Load Node Binary into Cosmovisor Folder
+# load node bin into cosmovisor foldar
 cp ~/go/bin/symphonyd ~/.symphonyd/cosmovisor/genesis/bin
 ```
 
