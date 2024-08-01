@@ -1,5 +1,25 @@
 # symphony-node
 ##Here are the steps
+
+# IF U ARE RUNNOG OTHER NODES OR PROCESSES CHECK IF THE 26656 PORT IS FREE
+
+# Using ss Command:
+These command will list all ports in usef if it was not listed then it is free
+
+```
+ss -tuln
+```
+
+# check again if that port is free, if its used it connects if not it will not give any output
+
+```
+nc -zv 127.0.0.1 26656
+```
+
+
+# if its free proceed with the below 
+
+
 ## install go
 ```console
 sudo rm -rvf /usr/local/go/
