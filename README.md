@@ -10,7 +10,7 @@ rm go1.21.1.linux-amd64.tar.gz
 
 ## configure go paths
 
-```
+```console
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export GO111MODULE=on
@@ -19,13 +19,13 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 ## install cosmoviser
 
-```
+```console
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
 ```
 
 ## install node
 
-```
+```console
 cd $HOME && git clone https://github.com/Orchestra-Labs/symphony symphony
 cd symphony
 git checkout v0.2.1
@@ -34,26 +34,26 @@ make install
 
 ## inititalise your node
 
-```
+```console
 symphonyd init symphony-node --chain-id symphony-testnet-2
 ```
 
 ## download genesis
 
-```
+```console
 wget -O genesis.json https://snapshots.polkachu.com/testnet-genesis/symphony/genesis.json --inet4-only
 mv genesis.json ~/.symphonyd/config
 ```
 
 ## adding bootstrap nodes
 
-```
+```console
 sed -i 's/seeds = ""/seeds = "ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:29156"/' ~/.symphonyd/config/config.toml
 ```
 
 ## launching your node
 
-```
+```console
 # Create Cosmovisor Folders
 mkdir -p ~/.symphonyd/cosmovisor/genesis/bin
 mkdir -p ~/.symphonyd/cosmovisor/upgrades
@@ -66,39 +66,15 @@ cp ~/go/bin/symphonyd ~/.symphonyd/cosmovisor/genesis/bin
 
 
 # go to this directory
-```
+```console
 cd /etc/systemd/system
 ```
-# then create that service file
-```
-sudo nano symphony.service
-```
-# then paste this file
-```
-[Unit]
-Description="symphony node"
-After=network-online.target
+## then create that service file
 
-[Service]
-User=USER
-ExecStart=/home/USER/go/bin/cosmovisor start
-Restart=always
-RestartSec=3
-LimitNOFILE=4096
-Environment="DAEMON_NAME=symphonyd"
-Environment="DAEMON_HOME=/home/USER/.symphonyd"
-Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
-Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
-Environment="UNSAFE_SKIP_BACKUP=true"
 
-[Install]
-WantedBy=multi-user.target
-```
-# change ur name in that file
-
-```
 # run this whole command at once
 
+```console
 USERNAME=$(whoami)
 sudo tee /etc/systemd/system/symphony.service > /dev/null <<EOF
 [Unit]
@@ -124,7 +100,7 @@ EOF
 ```
  ## strat your node
 
-```
+```console
 # Enable service
 sudo systemctl enable symphony.service
 
@@ -139,7 +115,7 @@ sudo journalctl -fu symphony
 
 ## to stop the node
 
-```
+```console
  sudo systemctl stop symphony.service
 ```
 
