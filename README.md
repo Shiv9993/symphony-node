@@ -21,20 +21,20 @@ nc -zv 127.0.0.1 26656
 
 ## create virtual environment 
 # download virtual env. packages
-```
+```console
 sudo apt update
 sudo apt install python3 python3-venv
 ```
 
 # create env.
-```
+```console
 cd $HOME
 python3 -m venv symphony-venv
 
 ```
 # actiavte it
 
-```
+```console
 cd $HOME
 source symphony-venv/bin/activate
 ```
@@ -159,3 +159,22 @@ sudo journalctl -fu symphony
  sudo systemctl stop symphony.service
 ```
 
+# to start the node again
+
+# activate the virtual env.
+
+```console
+cd $HOME
+source symphony-venv/bin/activate
+```
+
+# start the node 
+
+```
+sudo systemctl start symphony.service
+```
+# to check logs
+```
+sudo journalctl -fu symphony
+```
+# use ctrl + c to exit logs
