@@ -10,7 +10,7 @@ These command will list all ports in usef if it was not listed in LISTEN then it
 ss -tuln
 ```
 
-# check again if that port is free, if its used, it connects if not it doesn't give any output
+# check again if that port is free, if so, it connects, if not it doesn't give any output
 
 ```console
 nc -zv 127.0.0.1 26656
@@ -160,7 +160,7 @@ it might take around 10 - 30 min
 ```console
 symphonyd keys add wallet
 ```
-give password and save the nmemonic seed
+give local password and save the nmemonic seed
 
 go to kepler wallet and import that seed
 
@@ -187,7 +187,7 @@ symphonyd tx staking create-validator \
   --from wallet
 ```
 
-## save that txn hash and done your validator node is created.
+## save that txn hash and done your validator node is created
 
 ## to stop the node
 
