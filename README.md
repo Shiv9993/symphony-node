@@ -1,7 +1,7 @@
 # symphony-node
 ##Here are the steps
 
-# IF U ARE RUNNOG OTHER NODES OR PROCESSES CHECK IF THE 26656 PORT IS FREE
+# IF U ARE RUNNOG OTHER NODES OR PROCESSES ON THIS PORT CHECK IF THE 26656 PORT IS FREE
 
 
 These command will list all ports in usef if it was not listed in LISTEN then it is free
@@ -10,7 +10,7 @@ These command will list all ports in usef if it was not listed in LISTEN then it
 ss -tuln
 ```
 
-# check again if that port is free, if its used, it connects if not it will not give any output
+# check again if that port is free, if its used, it connects if not it doesn't give any output
 
 ```console
 nc -zv 127.0.0.1 26656
@@ -153,8 +153,8 @@ sudo journalctl -fu symphony
 # use ctrl+c to exit logs
 ```
 ## wait atleast 10 - 30 min for sync
-you can waitch logs ... when you can see the commits and txn in the logs then get the faucet
-it may take around 10 - 30 min
+watch logs  ... when until you can see the commits and txn in the logs then get the faucet
+it might take around 10 - 30 min
 
 ## create wallet
 ```console
