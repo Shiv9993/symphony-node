@@ -1,7 +1,7 @@
 # symphony-node
 ##Here are the steps
 
-# IF U ARE RUNNOG OTHER NODES OR PROCESSES ON THIS PORT CHECK IF THE 26656 PORT IS FREE
+# IF U ARE RUNNING OTHER NODES OR PROCESSES ON THIS PORT CHECK IF THE PORT 26656 IS FREE
 
 
 These command will list all ports in usef if it was not listed in LISTEN then it is free
